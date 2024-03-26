@@ -5,6 +5,7 @@ function Form() {
         firstname : 'Rishabh',
         lastname : 'Vachheta',
         email : 'RishabhVachheta@gmail.com',
+        phone : '9347189264'
     });
 
     return (
@@ -33,10 +34,19 @@ function Form() {
                     });
                 }} />
             </label>
+            <label >phone:
+                <input value={form.phone} onChange={e => {
+                    setForm({
+                        ...form,
+                        phone:e.target.value
+                    })
+                }}/>
+            </label>
             <p>
                 {form.firstname}{" "}
                 {form.lastname}{" "}
                 {form.email}{" "}
+                {form.phone}
             </p>
         </div>
     )
