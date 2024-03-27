@@ -4,12 +4,12 @@ export default function AddTodo ({onAddTodo}){
     const [title,setTitle] = useState('')
     return (
         <>
-            <input placeholder="Addn Todo" 
+            <input placeholder="Add Todo" 
             value={title}
             onChange={e => setTitle(e.target.value)}
             />
 
-            <button onClick={() => {
+            <button onClick = {() => {
                 setTitle('');
                 onAddTodo(title);
             }}>Add</button>
