@@ -1,6 +1,7 @@
+
 import React from 'react';
 
-const BlogList = ({ blogPosts, onEdit, onDelete }) => {
+const BlogList = ({ blogPosts, onEdit, onDelete, onDuplicate }) => {
   return (
     <div>
       <h2>Blog Posts</h2>
@@ -14,6 +15,7 @@ const BlogList = ({ blogPosts, onEdit, onDelete }) => {
             <img src={post.imageUrl} alt={post.title} style={{ maxWidth: '200px' }} />
             <button onClick={() => onEdit(index)}>Edit</button>
             <button onClick={() => onDelete(index)}>Delete</button>
+            <button onClick={() => onDuplicate(index)}>Duplicate</button>
           </li>
         ))}
       </ul>

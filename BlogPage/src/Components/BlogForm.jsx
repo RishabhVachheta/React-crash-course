@@ -1,7 +1,4 @@
 
-
-
-
 import React, { useState } from "react";
 
 const BlogForm = ({ onSubmit, isEditing, initialData, onEditSubmit }) => {
