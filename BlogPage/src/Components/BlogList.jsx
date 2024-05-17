@@ -3,7 +3,7 @@ import React from 'react';
 
 const BlogList = ({ blogPosts, onEdit, onDelete, onDuplicate }) => {
   return (
-    <div>
+    <div className='Bloglist'>
       <h2>Blog Posts</h2>
       <ul>
         {blogPosts.map((post, index) => (
@@ -12,7 +12,7 @@ const BlogList = ({ blogPosts, onEdit, onDelete, onDuplicate }) => {
             <h3>Title: {post.title}</h3>
             <p>Description: {post.description}</p>
             <p>Author: {post.author}</p>
-            <img src={post.imageUrl} alt={post.title} style={{ maxWidth: '200px' }} />
+            <img src={post.imageUrl} alt={post.title} style={{ maxWidth: '200px' }} /><br></br>
             <button onClick={() => onEdit(index)}>Edit</button>
             <button onClick={() => onDelete(index)}>Delete</button>
             <button onClick={() => onDuplicate(index)}>Duplicate</button>
